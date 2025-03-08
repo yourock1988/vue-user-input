@@ -1,8 +1,10 @@
 <script>
 import BrandInputText from './BrandInputText.vue'
+import BrandTextarea from './BrandTextarea.vue'
 
 export default {
-  components: { BrandInputText },
+  components: { BrandInputText, BrandTextarea },
+  props: ['carBrandUpdated'],
 
   data() {
     return {
@@ -29,6 +31,9 @@ export default {
     @update:model-value="carBrand = $event" -->
 
     <BrandInputText v-model="carBrand" />
+    <BrandTextarea v-model="carBrand" />
+    <!-- :carBrand="carBrand"
+      @carBrand="carBrand = carBrandUpdated" -->
 
     <div>
       <label for="">Brand</label>
