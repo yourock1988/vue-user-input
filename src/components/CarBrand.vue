@@ -32,8 +32,6 @@ export default {
 
     <BrandInputText v-model="carBrand" />
     <BrandTextarea v-model="carBrand" />
-    <!-- :carBrand="carBrand"
-      @carBrand="carBrand = carBrandUpdated" -->
 
     <div>
       <label for="">Brand</label>
