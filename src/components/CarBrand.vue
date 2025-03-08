@@ -31,12 +31,13 @@ export default {
     @update:model-value="carBrand = $event" -->
 
     <BrandInputText v-model="carBrand" />
+
     <BrandTextarea v-model="carBrand" />
 
-    <div>
-      <label for="">Brand</label>
-      <textarea v-model="carBrand"></textarea>
-    </div>
+    <!-- 
+
+      :car-brand="carBrand"
+      @car-brand-updated="carBrand = $event"
 
     <div>
       <label for="">Brand</label>
@@ -49,17 +50,16 @@ export default {
 
     <div>
       <span>Brand</span>
-
       <div v-for="(val, key) in availableBrands">
         <label for="">{{ val }}</label>
         <input type="radio" :value="key" v-model="carBrand" />
-        <!-- <input
+      </div>
+    </div> -->
+  </div>
+</template>
+<!-- <input
           type="radio"
           :value="key"
           :checked="key === carBrand"
           @change="carBrand = $event.target.value"
         /> -->
-      </div>
-    </div>
-  </div>
-</template>

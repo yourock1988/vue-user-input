@@ -1,30 +1,24 @@
 <script>
 export default {
-  // props: ['carBrand'],
+  props: ['modelValue'],
 
-  // emits: ['carBrandUpdated'],
-  data() {
-    return {
-      carBrand: '',
-      // availableBrands: ['mercedes', 'audi', 'ford'],
-      // availableBrands: { mercedes: 'Мерседес', audi: 'Ауди', ford: 'Форд' },
-    }
+  emits: ['update:model-value'],
+
+  watch: {
+    modelValue(newValue) {
+      console.log(newValue)
+    },
   },
-  // watch: {
-  //   carBrand(newValue) {
-  //     console.log(newValue + '!!!')
-  //   },
-  // },
 }
 </script>
+
 <template>
   <div>
-    <label for="">Brand</label>
+    <label for=""> Brand </label>
+
     <textarea
-      v-model="carBrand"
-      :carBrand="carBrand"
-      :value="carBrand"
-      @input="$emit('carBrandUpdated', $event.target.value)"
+      :value="modelValue"
+      @input="$emit('update:model-value', $event.target.value)"
     ></textarea>
   </div>
 </template>
