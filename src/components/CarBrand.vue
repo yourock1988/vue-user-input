@@ -54,18 +54,23 @@ export default {
       </select>
     </div> -->
 
-    <!-- <div>
+    <div>
       <span>Brand</span>
       <div v-for="(val, key) in availableBrands">
         <label for="">{{ val }}</label>
-        <input type="radio" :value="key" v-model="carBrand" />
-      </div>
-    </div> -->
-  </div>
-</template>
-<!-- <input
+        <input
           type="radio"
           :value="key"
           :checked="key === carBrand"
           @change="carBrand = $event.target.value"
-        /> -->
+        />
+      </div>
+    </div>
+  </div>
+</template>
+<!-- <input
+  type="radio"
+  :value="key"
+  :checked="key === carBrand"
+  @change="carBrand = $event.target.value"
+/> -->
