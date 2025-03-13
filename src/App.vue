@@ -1,8 +1,16 @@
 <script>
-import CarBrand from './components/CarBrand.vue'
+import CarBrand from './components/car-brand/CarBrand.vue'
 
 export default {
   components: { CarBrand },
+
+  data() {
+    return {
+      car: {
+        brand: '',
+      },
+    }
+  },
 }
 </script>
 
@@ -10,7 +18,15 @@ export default {
   <div>
     <h1>Car</h1>
 
-    <CarBrand />
+    <h2>Бренд: {{ car.brand }}</h2>
+
+    <CarBrand @car-brand-updated="car.brand = $event" />
+
+    <select name="x10000"></select>
+    <select name="x1000"></select>
+    <select name="x100"></select>
+    <select name="x10"></select>
+    <select name="x1"></select>
 
     <!-- <div>
       <h2>Price</h2>

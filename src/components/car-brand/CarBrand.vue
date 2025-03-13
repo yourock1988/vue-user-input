@@ -7,9 +7,7 @@ import BrandRadio from './BrandRadio.vue'
 export default {
   components: { BrandInputText, BrandTextarea, BrandSelect, BrandRadio },
 
-  props: ['carBrandUpdated'],
-
-  emits: ['availableBrands'],
+  emits: ['car-brand-updated'],
 
   data() {
     return {
@@ -17,11 +15,18 @@ export default {
       availableBrands: { mercedes: 'Мерседес', audi: 'Ауди', ford: 'Форд' },
     }
   },
+
+  watch: {
+    carBrand(newValue) {
+      this.$emit('car-brand-updated', newValue)
+    },
+  },
 }
 </script>
+
 <template>
   <div>
-    <h2>Brand</h2>
+    <h3>Выберите Бренд</h3>
 
     <button @click="availableBrands[carBrand] = carBrand">ADD</button>
 
