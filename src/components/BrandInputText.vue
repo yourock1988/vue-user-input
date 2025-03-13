@@ -3,12 +3,6 @@ export default {
   props: ['modelValue'],
 
   emits: ['update:model-value'],
-
-  watch: {
-    carBrand(newValue) {
-      console.log(newValue + '!!!')
-    },
-  },
 }
 </script>
 

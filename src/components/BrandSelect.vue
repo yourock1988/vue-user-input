@@ -1,6 +1,6 @@
 <script>
 export default {
-  props: ['modelValue', 'carBrandUpdated'],
+  props: ['modelValue', 'availableBrands'],
 
   emits: ['update:model-value'],
 }
@@ -13,7 +13,7 @@ export default {
       :value="modelValue"
       @input="$emit('update:model-value', $event.target.value)"
     >
-      <option v-for="(val, key) in carBrandUpdated" :key="key" :value="key">
+      <option v-for="(val, key) in availableBrands" :key="key" :value="key">
         {{ val }}
       </option>
     </select>

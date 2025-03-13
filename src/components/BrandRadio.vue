@@ -1,20 +1,21 @@
 <script>
 export default {
-  props: ['modelValue', 'carBrandUpdated'],
+  props: ['modelValue', 'availableBrands'],
+
   emits: ['update:model-value'],
 }
 </script>
+
 <template>
   <div>
     <span>Brand</span>
-    <div v-for="(val, key) in carBrandUpdated">
+    <div v-for="(val, key) in availableBrands">
       <label for="val">{{ val }}</label>
       <input
         type="radio"
         :value="key"
-        @input="$emit('update:model-value', $event.target.value)"
-        name="carBrand"
         :checked="key === modelValue"
+        @input="$emit('update:model-value', $event.target.value)"
       />
     </div>
   </div>
