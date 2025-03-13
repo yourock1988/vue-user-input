@@ -41,7 +41,7 @@ export default {
       v-model="carBrand"
       v-bind:car-brand-updated="availableBrands"
     />
-    <BrandRadio v-model="carBrand" v-bind:car-brand-updated="availableBrands" />
+    <BrandRadio v-model="carBrand" :car-brand-updated="availableBrands" />
 
     <!-- :car-brand="carBrand" @car-brand-updated="carBrand = $event" -->
 
@@ -53,8 +53,8 @@ export default {
         </option>
       </select>
     </div> -->
-    <!--
-    <div>
+
+    <!-- <div>
       <span>Brand</span>
       <div v-for="(val, key) in availableBrands">
         <label for="">{{ val }}</label>
