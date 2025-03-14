@@ -1,8 +1,8 @@
 <script>
-import BrandInputText from './BrandInputText.vue'
-import BrandTextarea from './BrandTextarea.vue'
-import BrandSelect from './BrandSelect.vue'
-import BrandRadio from './BrandRadio.vue'
+import BrandInputText from '../car-brand/BrandInputText.vue'
+import BrandTextarea from '../car-brand/BrandTextarea.vue'
+import BrandSelect from '../car-brand/BrandSelect.vue'
+import BrandRadio from '../car-brand/BrandRadio.vue'
 
 export default {
   components: { BrandInputText, BrandTextarea, BrandSelect, BrandRadio },
