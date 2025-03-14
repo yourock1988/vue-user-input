@@ -1,15 +1,17 @@
 <script>
 import CarBrand from './components/car-brand/CarBrand.vue'
-import CarPrice from './components/car-Price/CarPrice.vue'
+import CarPrice from './components/car-price/CarPrice.vue'
+import SuperSelect from './SuperSelect.vue'
 
 export default {
-  components: { CarBrand, CarPrice },
+  components: { CarBrand, CarPrice, SuperSelect },
 
   data() {
     return {
+      // single source of truth
       car: {
-        brand: '',
-        price: '',
+        brand: 'йцук',
+        price: 10000,
       },
     }
   },
@@ -18,33 +20,13 @@ export default {
 
 <template>
   <div>
-    <h1>Car</h1>
+    <SuperSelect></SuperSelect>
 
-    <h2>Бренд: {{ car.brand }}</h2>
+    <!-- <h1>Car {{ car }}</h1>
 
     <CarBrand @car-brand-updated="car.brand = $event" />
 
-    <h2>Price {{ car.price }}</h2>
-
-    <CarPrice @car-price-updated="car.price = $event" />
-
-    <!-- <select name="x10000"></select>
-    <select name="x1000"></select>
-    <select name="x100"></select>
-    <select name="x10"></select>
-    <select name="x1"></select> -->
-
-    <!-- <div>
-      <h2>Price</h2>
-      <div>
-        <label for="">Price</label>
-        <input type="number" />
-      </div>
-      <div>
-        <label for="">Price</label>
-        <input type="range" />
-      </div>
-    </div> -->
+    <CarPrice @car-price-updated="car.price = $event" /> -->
 
     <!-- <div>
       <h2>HasTurbo</h2>

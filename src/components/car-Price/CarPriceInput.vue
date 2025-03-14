@@ -18,6 +18,6 @@ export default {
     type="number"
     id="priceInput"
     :value="modelValue"
-    @input="$emit('update:model-value', $event.target.value)"
+    @input="$emit('update:model-value', +$event.target.value)"
   />
 </template>

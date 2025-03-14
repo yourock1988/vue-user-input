@@ -21,7 +21,7 @@ export default {
       min="0"
       max="100000"
       :value="modelValue"
-      @input="$emit('update:model-value', $event.target.value)"
+      @input="$emit('update:model-value', +$event.target.value)"
     />
   </div>
 </template>

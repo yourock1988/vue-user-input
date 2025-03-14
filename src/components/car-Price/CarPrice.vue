@@ -1,6 +1,6 @@
 <script>
-import CarPriceInput from '../car-Price/CarPriceInput.vue'
-import CarPriceRange from '../car-Price/CarPriceRange.vue'
+import CarPriceInput from './CarPriceInput.vue'
+import CarPriceRange from './CarPriceRange.vue'
 
 export default {
   components: { CarPriceInput, CarPriceRange },
@@ -9,14 +9,13 @@ export default {
 
   data() {
     return {
-      carPrice: '',
+      carPrice: 0,
     }
   },
 
   watch: {
     carPrice(newValue) {
       this.$emit('car-price-updated', newValue)
-      console.log(newValue)
     },
   },
 }
@@ -24,7 +23,9 @@ export default {
 
 <template>
   <div>
-    <h3>Цена: {{ carPrice }}</h3>
+    <h2>Price: {{ carPrice }}</h2>
+
+    <h3>Выберите цену:</h3>
 
     <CarPriceInput v-model="carPrice" />
 
