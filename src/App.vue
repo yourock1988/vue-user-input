@@ -1,10 +1,11 @@
 <script>
+import SuperSelect2 from './components/car-price/CarPriceSuperSelect.vue'
 import CarBrand from './components/car-brand/CarBrand.vue'
 import CarPrice from './components/car-price/CarPrice.vue'
-import SuperSelect from './SuperSelect.vue'
+// import SuperSelect from './SuperSelect.vue'
 
 export default {
-  components: { CarBrand, CarPrice, SuperSelect },
+  components: { CarBrand, CarPrice, SuperSelect2 },
 
   data() {
     return {
@@ -20,13 +21,14 @@ export default {
 
 <template>
   <div>
-    <SuperSelect></SuperSelect>
+    <!-- <SuperSelect></SuperSelect> -->
+    <!-- <SuperSelect2></SuperSelect2> -->
 
-    <!-- <h1>Car {{ car }}</h1>
+    <h1>Car {{ car }}</h1>
 
     <CarBrand @car-brand-updated="car.brand = $event" />
 
-    <CarPrice @car-price-updated="car.price = $event" /> -->
+    <CarPrice @car-price-updated="car.price = $event" />
 
     <!-- <div>
       <h2>HasTurbo</h2>
