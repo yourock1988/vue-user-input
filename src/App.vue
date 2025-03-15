@@ -72,4 +72,11 @@ html {
   font-size: 18px;
   color: #234;
 }
+.main-container {
+  display: flex;
+  gap: 20px;
+}
+h1 {
+  font-size: 16px;
+}
 </style>
