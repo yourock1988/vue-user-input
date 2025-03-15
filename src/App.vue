@@ -21,9 +21,6 @@ export default {
 
 <template>
   <div class="main-container">
-    <!-- <SuperSelect></SuperSelect> -->
-    <!-- <SuperSelect2></SuperSelect2> -->
-
     <h1>Car {{ car }}</h1>
 
     <CarBrand @car-brand-updated="car.brand = $event" />
