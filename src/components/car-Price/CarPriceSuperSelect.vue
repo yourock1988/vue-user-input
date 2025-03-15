@@ -11,13 +11,13 @@ export default {
   },
 
   computed: {
-    structuredNumber2() {
+    structuredNumber() {
       return this.modelValue.toString().split('').map(Number)
     },
   },
   methods: {
-    updateDigit(index, value) {
-      let numberArray = this.structuredNumber2.slice()
+    updateNumber(index, value) {
+      let numberArray = this.structuredNumber.slice()
       numberArray[index] = +value
       this.number = +numberArray.join('')
       this.$emit('update:model-value', this.number)
@@ -28,13 +28,13 @@ export default {
 
 <template>
   <h1>{{ this.modelValue }}</h1>
-  <h2>{{ structuredNumber2 }}</h2>
+  <h2>{{ structuredNumber }}</h2>
   <div>
     <select
-      v-for="(partVal, partKey) in structuredNumber2"
+      v-for="(partVal, partKey) in structuredNumber"
       :key="partKey"
       :value="partVal"
-      @change="updateDigit(partKey, $event.target.value)"
+      @change="updateNumber(partKey, $event.target.value)"
     >
       <option v-for="digit of digits" :key="digit">
         {{ digit }}

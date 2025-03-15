@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="main-container">
     <!-- <SuperSelect></SuperSelect> -->
     <!-- <SuperSelect2></SuperSelect2> -->
 
