@@ -1,11 +1,10 @@
 <script>
-import SuperSelect2 from './components/car-price/CarPriceSuperSelect.vue'
 import CarBrand from './components/car-brand/CarBrand.vue'
 import CarPrice from './components/car-price/CarPrice.vue'
-// import SuperSelect from './SuperSelect.vue'
+import carTurbo from './components/car-turbo/carTurbo.vue'
 
 export default {
-  components: { CarBrand, CarPrice, SuperSelect2 },
+  components: { CarBrand, CarPrice, carTurbo },
 
   data() {
     return {
@@ -13,6 +12,7 @@ export default {
       car: {
         brand: 'йцук',
         price: 10000,
+        hasTurbo: true,
       },
     }
   },
@@ -26,6 +26,8 @@ export default {
     <CarBrand @car-brand-updated="car.brand = $event" />
 
     <CarPrice @car-price-updated="car.price = $event" />
+
+    <carTurbo @car-hasTurbo-updated="car.hasTurbo = $event" />
 
     <!-- <div>
       <h2>HasTurbo</h2>
